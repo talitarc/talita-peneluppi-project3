@@ -1,0 +1,40 @@
+// COLOR VARIABLES
+
+$darkest-color: #2d0c03;
+$lightest-color: #f4f6ec;
+$main-detail-color: #ff1a4a;
+$second-detail-color: #98514b;
+$light-detail-color: #f8b786;
+
+//FONT STYLES VARIABLES
+@mixin brand-name($size-value) {
+   font-family: 'Kaushan Script', cursive;
+   font-size: $size-value;
+}
+
+@mixin secondary-title($size-value) {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: $size-value;
+    font-weight: bold;
+}
+
+@mixin body-text($size-value, $line-height) {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: $size-value;
+    line-height: $line-height;
+}
+
+
+// FONT ROOT STYLES
+
+html {
+    font-size: 125%;
+}
+
+// WRAPPER STYLES
+
+.wrapper {
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+}

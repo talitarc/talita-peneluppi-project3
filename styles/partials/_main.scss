@@ -1,0 +1,25 @@
+.question {
+    display: flex;
+    flex-direction: column;
+}
+
+
+h2 {
+    @include secondary-title(2rem);
+}
+
+.option-box {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        width: 35%;
+    }
+
+    input[type="radio"] {
+        margin-top: -1px;
+        vertical-align: middle;
+        width: 30%;
+        padding: 10%;
+    }
+}

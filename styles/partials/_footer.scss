@@ -1,0 +1,12 @@
+footer {
+    background-color: $darkest-color;
+    display: flex;
+    color: $lightest-color;
+
+    p {
+        display: flex;
+        justify-content: center;
+
+        @include body-text(0.8rem, 1rem);
+    }
+}

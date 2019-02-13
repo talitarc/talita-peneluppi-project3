@@ -1,0 +1,102 @@
+header {
+    background-color: $darkest-color;
+    color: $lightest-color;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    padding-bottom: 4%;
+
+    .wrapper {
+        border: 2px dotted $light-detail-color;
+        margin: 5% auto;
+    }
+
+    p { 
+       display: flex;
+       justify-content: center;
+       margin-top: 0;
+       margin: 5%;
+
+       @include body-text(0.8rem, 1.4rem);
+    }
+
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 5%;
+
+    i {
+        font-size: 2.4rem;
+        align-self: center;
+        color: $main-detail-color;
+        transform: rotate(-20grad);
+        margin-right: 1rem;
+    }
+
+    h1 {
+        @include brand-name(1.8rem);
+        line-height: 2.5rem;
+        margin-bottom: 5%;
+    }
+}
+
+// IPAD STYLES 
+
+@media (min-width: 768px) {
+    header {
+        p {
+            @include body-text(0.9rem, 1.4rem);
+        }
+    }
+    .main-title {
+        i {
+            font-size: 4rem;
+            margin-right: 1rem;
+        }
+    
+        h1 {
+            @include brand-name(4.5rem);
+            line-height: 5rem;
+            margin-bottom: 5%;
+        }
+    }
+}
+
+// SMALL SCREENS 
+
+@media (min-width: 992px) {
+    header {
+        p {
+            @include body-text(1.1rem, 1.5rem);
+        }
+    }
+    .main-title {
+        h1 {
+            flex-basis: 55%;
+        }
+    }
+}
+
+// BIGGER SCREENS
+
+@media (min-width: 1200px) {
+    header {
+        padding-bottom: 0;
+
+        p {
+            @include body-text(1.2rem, 1.6rem);
+        }
+    }
+    .main-title {
+        h1 {
+            flex-basis: auto;
+            margin-bottom: 3%;
+        }
+    }
+}
