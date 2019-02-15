@@ -206,7 +206,7 @@ header p {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 0;
-  margin: 5%;
+  margin: 3%;
   font-family: 'Ubuntu', sans-serif;
   font-size: 0.8rem;
   line-height: 1.4rem;
@@ -296,33 +296,45 @@ header p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 h2 {
   font-family: 'Ubuntu', sans-serif;
   font-size: 2rem;
   font-weight: bold;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
-.option-box {
+.opt-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 2%;
 }
 
-.option-box label {
-  width: 35%;
+.opt-box label {
+  width: 65%;
 }
 
-.option-box input[type="radio"] {
-  margin-top: -1px;
-  vertical-align: middle;
-  width: 30%;
-  padding: 10%;
+.opt-box input[type="radio"] {
+  width: 10%;
+}
+
+.display-answer {
+  display: none;
 }
 
 footer {

@@ -1,25 +1,35 @@
 .question {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 
 h2 {
     @include secondary-title(2rem);
+    justify-content: left;
 }
 
-.option-box {
+.opt-box {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+
+    padding-bottom: 2%;
 
     label {
-        width: 35%;
+        width: 65%;
     }
 
     input[type="radio"] {
-        margin-top: -1px;
-        vertical-align: middle;
-        width: 30%;
-        padding: 10%;
+        // margin-top: -1px;
+        // vertical-align: middle;
+        width: 10%;
+        // padding: 10%;
     }
+}
+
+.display-answer {
+    display: none;
 }

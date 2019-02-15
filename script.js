@@ -178,31 +178,78 @@ const randomNumb = Math.floor(Math.random() * 11);
 // CREATE A NEW ARRAY WITH A RANDOM SELECTION OF ITEMS OF THE ARRAY QUESTIONS
 let displayQuestions = questions.splice(randomNumb, 5);
 
+const fValentine = [];
+
+let score = 0;
+
+fValentine.init = () => {
+    fValentine.quizz(displayQuestions);
+};
 
 // DISPLAY SELECTED QUESTIONS ON THE DOM
-for (let i = 0; i < 6; i++) {
-    let index = i;
 
-    $(`div.question${index}`).html(`
-        <h2>${displayQuestions[index].person}</h2><div class="option-box">
-        <div><input type="radio" id="${displayQuestions[index].pair[0]}" name="${displayQuestions[index].pair}" value="${displayQuestions[index].pair[0]}">
-        <label for="${displayQuestions[index].pair[0]}">${displayQuestions[index].pair[0]}</label></div>
+fValentine.quizz = (object) => {
 
-        <input type="radio" id="${displayQuestions[index].pair[1]}" name="${displayQuestions[index].pair}" value="${displayQuestions[index].pair[1]}">
-        <label for="${displayQuestions[index].pair[1]}">${displayQuestions[index].pair[1]}</label>
+    object.forEach((element) => {
+
+        $('div.quizz').append(`
+            <div class="question">
+            <h2>${element.person}</h2>
         
-        <input type="radio" id="${displayQuestions[index].pair[2]}" name="${displayQuestions[index].pair}" value="${displayQuestions[index].pair[2]}">
-        <label for="${displayQuestions[index].pair[2]}">${displayQuestions[index].pair[2]}</label>
+            <div class="opt-box">
+            <input type="radio" id="${element.pair[0]}" name="$ {element.pair}" value="${element.pair[0]}">
+            <label for="${element.pair[0]}">${element.pair[0]}</label></div>
 
-        <input type="radio" id="${displayQuestions[index].pair[3]}" name="${displayQuestions[index].pair}" value="${displayQuestions[index].pair[3]}">
-        <label for="${displayQuestions[index].pair[3]}">${displayQuestions[index].pair[3]}</label></div>`);
-}
+            <div class="opt-box">
+            <input type="radio" id="${element.pair[1]}" name="$ {element.pair}" value="${element.pair[1]}">
+            <label for="${element.pair[1]}">${element.pair[1]}</label></div>
+
+            <div class="opt-box">
+            <input type="radio" id="${element.pair[2]}" name="$ {element.pair}" value="${element.pair[2]}">
+            <label for="${element.pair[2]}">${element.pair[2]}</label></div>
+
+            <div class="opt-box">
+            <input type="radio" id="${element.pair[3]}" name="$ {element.pair}" value="${element.pair[3]}">
+            <label for="${element.pair[3]}">${element.pair[3]}</label>
+            </div>
+        
+            <div class="answer">
+            <h2>Answer: ${element.answer}</h2>
+            </div>
+            </div>
+        `);
+        $('div.answer').addClass("display-answer");
+    });
+};
 
 // EVENT PREVENT DEFAULT
+$(document).ready(function () {
+    fValentine.init();
 
 // LISTEN THE USER CLICK
 
+    $('.quizz').on('click', 'input', function(event){
+        event.preventDefault();
 // IDENTIFY THE USER ANSWER
+        let userAnswer = this.id;
+
+        let parent = ($(this).parent()).parent();
+        
+// SHOW THE ANSWER TO THE USER
+        const checkAnswer = $(parent).find('.answer');
+        checkAnswer.removeClass('display-answer');
+        
+        let rightAnswer = checkAnswer.text();
+
+        const verifyAnswer = rightAnswer.filter((item) => {
+            return true;
+        });
+
+        console.log(verifyAnswer);
+        
+    });
+
+
 
 // KEEP THE USERS ANSWER
 
@@ -221,3 +268,5 @@ for (let i = 0; i < 6; i++) {
 // AT QUESTION 5, THEY CANNOT CHOOSE NEXT QUESTION, BUT ONLY "SHOW THE SCORE"
 
 // SHOW TO THE USER THE FINAL SCORE
+
+});
