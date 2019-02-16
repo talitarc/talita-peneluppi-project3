@@ -330,11 +330,20 @@ h2 {
 }
 
 .opt-box input[type="radio"] {
-  width: 10%;
+  margin-right: 2%;
 }
 
 .display-answer {
   display: none;
+}
+
+.opt-clicked {
+  background-color: red;
+  opacity: 0.5;
+}
+
+input[type="radio"]:checked + label {
+  background-color: green;
 }
 
 footer {

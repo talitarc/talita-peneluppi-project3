@@ -10,7 +10,13 @@ const questions = [
             'Justin Timberlake'
         ],
         answer: 'Kiefer Sutherland',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'cusackJR',
+            'sutherlandJR',
+            'brosnanJR',
+            'timberlakeJR'
+        ]
     },
 
     {
@@ -22,7 +28,13 @@ const questions = [
             'Tupac Shakur'
         ],
         answer: 'Tupac Shakur',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'voxMD',
+            'combsMD',
+            'croweMD',
+            'shakurMD'
+        ]
     },
     {
         person: 'Cher',
@@ -33,7 +45,13 @@ const questions = [
             'John F Kennedy Jr'
         ],
         answer: 'Gene Simmons',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'sinatraCH',
+            'joviCH',
+            'simmonsCH',
+            'kennedyCH'
+        ]
     },
     {
         person: 'Britney Spears',
@@ -44,7 +62,13 @@ const questions = [
             'Mark Wahlberg'
         ],
         answer: 'Justin Timberlake',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'carterBS',
+            'dicaprioBS',
+            'timberlakeBS',
+            'wahlbergBS'
+        ]
     },
     {
         person: 'Demi Moore',
@@ -55,7 +79,13 @@ const questions = [
             'John Cusack'
         ],
         answer: 'Bruce Willis',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'willisDM',
+            'brosnanDM',
+            'neesonDM',
+            'cusackDM'
+        ]
     },
     {
         person: 'Leonardo DiCaprio',
@@ -66,7 +96,13 @@ const questions = [
             'Cameron Diaz'
         ],
         answer: 'Rihanna',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'rowlandLD',
+            'rihannaLC',
+            'jolieLD',
+            'diazLD'
+        ]
     },
     {
         person: 'Rihanna',
@@ -77,7 +113,13 @@ const questions = [
             'Sean Combs aka P. Diddy'
         ],
         answer: 'Shia LaBeouf',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'sisqoRH',
+            'beaoufRH',
+            'aaliyahRH',
+            'combsRH'
+        ]
     },
     {
         person: 'Sarah Jessica Parker',
@@ -88,7 +130,13 @@ const questions = [
             'Robert Downey Jr'
         ],
         answer: 'Robert Downey Jr',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'pittSP',
+            'tarantinoSP',
+            'washingtonSP',
+            'downeySP'
+        ]
     },
     {
         person: 'Jared Leto',
@@ -99,7 +147,13 @@ const questions = [
             'Gwen Stefani'
         ],
         answer: 'Paris Hilton',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'ritchieJL',
+            'hiltonJL',
+            'williamsJL',
+            'stefaniJL'
+        ]
     },
     {
         person: 'Linday Lohan',
@@ -110,7 +164,13 @@ const questions = [
             'Paris Hilton'
         ],
         answer: 'Samantha Ronson',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'mayerLL',
+            'ronsonLL',
+            'duffLL',
+            'hiltonLL'
+        ]
     },
     {
         person: 'Uma Thurman',
@@ -121,7 +181,13 @@ const questions = [
             'Ben Affleck'
         ],
         answer: 'John Cusack',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'cusackUT',
+            'letoUT',
+            'foxxUT',
+            'affleckUT'
+        ]
     },
     {
         person: 'Jake Gyllenhaal',
@@ -132,7 +198,13 @@ const questions = [
             'Kirsten Dunst'
         ],
         answer: 'Kirsten Dunst',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'rihannaJG',
+            'mooreJG',
+            'campbellJG',
+            'dunstJG'
+        ]
     },
     {
         person: 'Cara Delevingne',
@@ -143,7 +215,13 @@ const questions = [
             'Zayn Malik'
         ],
         answer: 'Michelle Rodriguez',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'rodriguezCD',
+            'lipaCD',
+            'rihannaCD',
+            'malikCD'
+        ]
     },
     {
         person: 'Will Smith',
@@ -154,7 +232,13 @@ const questions = [
             'Naomi Campbell'
         ],
         answer: 'Tyra Banks',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'banksWS',
+            'rowlandWS',
+            'barrymoreWS',
+            'campbellWS'
+        ]
     },
     {
         person: 'Jennifer Lopez',
@@ -165,108 +249,113 @@ const questions = [
             'Ben Affleck'
         ],
         answer: 'Ben Affleck',
-        imgAnswer: 'url'
+        imgAnswer: 'url',
+        id: [
+            'pittJL',
+            'jayzJL',
+            'thorntonJL',
+            'affleckJL'
+        ]
     }
 ];
 
+const fValentine = [];
+
 // EXT: QUESTIONS APPEARS RANDOMLY AND WITHOUT REPETITION WHEN THE DOM IS LOAD
 
-
-// MATH.RANDOM *11 TO GUARANTEE THAT WE WILL ALWAYS HAVA 5 ELEMENTS IN THE ARRAY
+// MATH.RANDOM *11 TO GUARANTEE THAT WE WILL ALWAYS HAVE 5 ELEMENTS IN THE ARRAY
 const randomNumb = Math.floor(Math.random() * 11);
 
 // CREATE A NEW ARRAY WITH A RANDOM SELECTION OF ITEMS OF THE ARRAY QUESTIONS
 let displayQuestions = questions.splice(randomNumb, 5);
 
-const fValentine = [];
+// CREATE A VARIABLE TO STORE USER'S SCORE
+fValentine.score = 0;
 
-let score = 0;
+// CREATE A VARIABLE TO STORE QUESTIONS ANSWERED
+fValentine.answerCount = 0;
 
 fValentine.init = () => {
     fValentine.quizz(displayQuestions);
+    fValentine.showScore();
 };
 
-// DISPLAY SELECTED QUESTIONS ON THE DOM
+// DISPLAY SELECTED QUESTIONS IN THE DOM
 
 fValentine.quizz = (object) => {
 
     object.forEach((element) => {
 
-        $('div.quizz').append(`
+        $('form.quizz').append(`
             <div class="question">
             <h2>${element.person}</h2>
         
             <div class="opt-box">
-            <input type="radio" id="${element.pair[0]}" name="$ {element.pair}" value="${element.pair[0]}">
-            <label for="${element.pair[0]}">${element.pair[0]}</label></div>
+            <input type="radio" id="${element.id[0]}" name="${element.person}" value="${element.pair[0]}">
+            <label for="${element.id[0]}">${element.pair[0]}</label></div>
 
             <div class="opt-box">
-            <input type="radio" id="${element.pair[1]}" name="$ {element.pair}" value="${element.pair[1]}">
-            <label for="${element.pair[1]}">${element.pair[1]}</label></div>
+            <input type="radio" id="${element.id[1]}" name="${element.person}" value="${element.pair[1]}">
+            <label for="${element.id[1]}">${element.pair[1]}</label></div>
 
             <div class="opt-box">
-            <input type="radio" id="${element.pair[2]}" name="$ {element.pair}" value="${element.pair[2]}">
-            <label for="${element.pair[2]}">${element.pair[2]}</label></div>
+            <input type="radio" id="${element.id[2]}" name="${element.person}" value="${element.pair[2]}">
+            <label for="${element.id[2]}">${element.pair[2]}</label></div>
 
             <div class="opt-box">
-            <input type="radio" id="${element.pair[3]}" name="$ {element.pair}" value="${element.pair[3]}">
-            <label for="${element.pair[3]}">${element.pair[3]}</label>
+            <input type="radio" id="${element.id[3]}" name="${element.person}" value="${element.pair[3]}">
+            <label for="${element.id[3]}">${element.pair[3]}</label>
             </div>
         
-            <div class="answer">
-            <h2>Answer: ${element.answer}</h2>
-            </div>
+            <div class="answer"><h2>Answer: ${element.answer}</h2></div>
             </div>
         `);
-        $('div.answer').addClass("display-answer");
+        $('div.answer').addClass("display-answer"); 
     });
+
+    fValentine.identifyClick();
 };
 
-// EVENT PREVENT DEFAULT
-$(document).ready(function () {
-    fValentine.init();
-
-// LISTEN THE USER CLICK
-
+fValentine.identifyClick = () => {
     $('.quizz').on('click', 'input', function(event){
-        event.preventDefault();
-// IDENTIFY THE USER ANSWER
-        let userAnswer = this.id;
+        
+// IDENTIFY THE USER ANSWER AND KEEP THE USERS ANSWER
+        let userAnswer = this.value;
 
+//IDENTIFY THE PARENT TO DISPLAY THE ANSWER
         let parent = ($(this).parent()).parent();
         
 // SHOW THE ANSWER TO THE USER
         const checkAnswer = $(parent).find('.answer');
         checkAnswer.removeClass('display-answer');
-        
+//
         let rightAnswer = checkAnswer.text();
 
-        const verifyAnswer = rightAnswer.filter((item) => {
-            return true;
-        });
-
-        console.log(verifyAnswer);
-        
-    });
-
-
-
-// KEEP THE USERS ANSWER
-
-// CREATE A VARIABLE TO STORE USER'S SCORE
+// UPDATE THE ANSWER COUNTING TO DEFINE WHICH SCORE MESSAGE WILL BE SHOWN BY SHOWSCORE
+        if ('input[type="radio"]:checked') {
+            fValentine.answerCount = fValentine.answerCount + 1;
+        }
 
 // IF USER IS RIGHT ADD +1 TO THE SCORE VARIABLE
+        if (rightAnswer == `Answer: ${userAnswer}`) {
+            fValentine.score = fValentine.score +1;
+        }
+    });
+};
 
-// SHOW THE RIGHT ANSWER TO THE USER  AND TELL TO THE USER IF IT'S RIGHT OR WRONG
+// SHOW A MESSAGE WITH THE SCORE WHEN THE BUTTON IS CLICKED
+fValentine.showScore = () => {
+    $('input[type=submit]').on('click', function(event){
+        
+        if (fValentine.answerCount == 5) {
+            $('.score').html(`You got ${fValentine.score} answers right!`);
+        } else if (0 < fValentine.answerCount < 5) {
+            $('.score').html(`You haven\'t answer all our questions yet!, but your current score is ${fValentine.score}.`);
+        };
+    });
+};
 
-// WHEN THE USER CLICKS IN THE NEXT BUTTON, IT LEADS TO NEXT QUESTION
-
-// LISTEN THE USER CLICKING THE NEXT BUTTON
-
-// GOES TO THE NEXT QUESTION
-
-// AT QUESTION 5, THEY CANNOT CHOOSE NEXT QUESTION, BUT ONLY "SHOW THE SCORE"
-
-// SHOW TO THE USER THE FINAL SCORE
-
+// INIT FVALENTINE WHEN THE PAGE IS READY
+$(document).ready(function () {
+    fValentine.init();
 });

@@ -23,13 +23,19 @@ h2 {
     }
 
     input[type="radio"] {
-        // margin-top: -1px;
-        // vertical-align: middle;
-        width: 10%;
-        // padding: 10%;
+        margin-right: 2%;
     }
 }
 
 .display-answer {
     display: none;
+}
+
+.opt-clicked{
+    background-color: red;
+    opacity: 0.5;
+}
+
+input[type="radio"]:checked + label {
+    background-color: green;
 }
