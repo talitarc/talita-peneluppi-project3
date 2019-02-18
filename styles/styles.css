@@ -423,7 +423,6 @@ input[type="radio"]:checked + label {
 .answer img {
   width: 100%;
   max-width: 400px;
-  height: auto;
 }
 
 .score {
