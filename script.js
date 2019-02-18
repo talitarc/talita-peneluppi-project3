@@ -10,7 +10,7 @@ const questions = [
             'Justin Timberlake'
         ],
         answer: 'Kiefer Sutherland',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q1.jpg',
         id: [
             'cusackJR',
             'sutherlandJR',
@@ -28,7 +28,7 @@ const questions = [
             'Tupac Shakur'
         ],
         answer: 'Tupac Shakur',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q2.jpg',
         id: [
             'voxMD',
             'combsMD',
@@ -45,7 +45,7 @@ const questions = [
             'John F Kennedy Jr'
         ],
         answer: 'Gene Simmons',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q3.jpg',
         id: [
             'sinatraCH',
             'joviCH',
@@ -62,7 +62,7 @@ const questions = [
             'Mark Wahlberg'
         ],
         answer: 'Justin Timberlake',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q4.jpg',
         id: [
             'carterBS',
             'dicaprioBS',
@@ -79,7 +79,7 @@ const questions = [
             'John Cusack'
         ],
         answer: 'Bruce Willis',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q5.jpg',
         id: [
             'willisDM',
             'brosnanDM',
@@ -96,7 +96,7 @@ const questions = [
             'Cameron Diaz'
         ],
         answer: 'Rihanna',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q6.jpg',
         id: [
             'rowlandLD',
             'rihannaLC',
@@ -113,7 +113,7 @@ const questions = [
             'Sean Combs aka P. Diddy'
         ],
         answer: 'Shia LaBeouf',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q7.jpg',
         id: [
             'sisqoRH',
             'beaoufRH',
@@ -130,7 +130,7 @@ const questions = [
             'Robert Downey Jr'
         ],
         answer: 'Robert Downey Jr',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q8.jpg',
         id: [
             'pittSP',
             'tarantinoSP',
@@ -147,7 +147,7 @@ const questions = [
             'Gwen Stefani'
         ],
         answer: 'Paris Hilton',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q9.jpg',
         id: [
             'ritchieJL',
             'hiltonJL',
@@ -164,7 +164,7 @@ const questions = [
             'Paris Hilton'
         ],
         answer: 'Samantha Ronson',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q10.jpg',
         id: [
             'mayerLL',
             'ronsonLL',
@@ -175,13 +175,13 @@ const questions = [
     {
         person: 'Uma Thurman',
         pair: [
-            'John Cusack',
+            'Ethan Hawke',
             'Jared Leto',
             'Jamie Foxx',
             'Ben Affleck'
         ],
-        answer: 'John Cusack',
-        imgAnswer: 'url',
+        answer: 'Ethan Hawke',
+        imgAnswer: './img/img-q11.jpg',
         id: [
             'cusackUT',
             'letoUT',
@@ -198,7 +198,7 @@ const questions = [
             'Kirsten Dunst'
         ],
         answer: 'Kirsten Dunst',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q12.jpg',
         id: [
             'rihannaJG',
             'mooreJG',
@@ -215,7 +215,7 @@ const questions = [
             'Zayn Malik'
         ],
         answer: 'Michelle Rodriguez',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q13.jpg',
         id: [
             'rodriguezCD',
             'lipaCD',
@@ -232,7 +232,7 @@ const questions = [
             'Naomi Campbell'
         ],
         answer: 'Tyra Banks',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q14.jpg',
         id: [
             'banksWS',
             'rowlandWS',
@@ -249,7 +249,7 @@ const questions = [
             'Ben Affleck'
         ],
         answer: 'Ben Affleck',
-        imgAnswer: 'url',
+        imgAnswer: './img/img-q15.jpg',
         id: [
             'pittJL',
             'jayzJL',
@@ -307,7 +307,8 @@ fValentine.quizz = (object) => {
             <label for="${element.id[3]}">${element.pair[3]}</label>
             </div>
         
-            <div class="answer"><h2><span>Answer:</span> ${element.answer}</h2></div>
+            <div class="answer"><h2><span>Answer:</span> ${element.answer}</h2><div class="photo-box"><img src=${element.imgAnswer} alt="${element.person} and ${element.answer}"></div></div>
+            
             </div>
         `);
         $('div.answer').addClass("display-answer"); 
