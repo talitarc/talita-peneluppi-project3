@@ -65,6 +65,7 @@ input[type="radio"]:checked + label {
     display: flex;
     justify-content: center;
     align-content: center;
+
     h2 {
         @include secondary-title(1.2rem);
         flex-direction: column;
@@ -103,6 +104,42 @@ input[type="radio"]:checked + label {
     .opt-box {
         label {
             width: 35%;
+        }
+    }
+}
+
+// SMALL SCREEN STYLES
+@media (min-width: 992px) {
+    h2 {
+        @include secondary-title(2rem);
+    }
+
+    .opt-box {
+        label {
+            width: 52%;
+            @include body-text(1.2rem, 1.2rem);
+        }
+    }
+
+    .answer {
+        h2 {
+            @include secondary-title(1.6rem);
+            line-height: 2.2rem;
+        }
+    }
+    .box-score {
+        @include body-text(1.4rem, 1.6rem);
+    }
+}
+
+// BIG SCREEN STYLES
+@media (min-width: 1200px) {
+    .question{
+        margin-top: 5%;
+    }
+    .opt-box {
+        label {
+            width: 43%;
         }
     }
 }

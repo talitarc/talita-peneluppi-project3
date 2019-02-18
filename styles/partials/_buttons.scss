@@ -33,6 +33,12 @@ main {
     main {
         input[type='submit'] {
             width: 50%;
+
+        }
+
+        input[type='submit'],
+        button {
+            @include secondary-title(1.4rem);
         }
     }
 }
