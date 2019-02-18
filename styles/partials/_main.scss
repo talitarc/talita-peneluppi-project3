@@ -26,6 +26,7 @@ h2 {
     @include secondary-title(1.6rem);
     display: flex;
     justify-content: center;
+    align-content: center;
     text-align: center;
     margin-top: 5%;
 }
