@@ -346,11 +346,16 @@ fValentine.identifyClick = () => {
 // SHOW A MESSAGE WITH THE SCORE WHEN THE BUTTON IS CLICKED
 fValentine.showScore = () => {
     $('input[type=submit]').on('click', function(event){
+        event.preventDefault();
+
+        $('.score').addClass('score-clicked');
         
         if (fValentine.answerCount == 5) {
-            $('.score').append(`<div class="box-score"><p>You got ${fValentine.score} answers right!</p></div>`);
+            $('.score').append(`<div class="box-score"><p>You got <span> ${fValentine.score} right answers</span>!</p></div>
+            <button value="Play again" onClick="window.location.reload()">Play again!</button>`);
         } else if (0 < fValentine.answerCount < 5) {
-            $('.score').append(`<div class="box-score"><p>You haven\'t answer all our questions yet!, but your current score is ${fValentine.score}.</p></div>`);
+            $('.score').append(`<div class="box-score"><p>You haven\'t answered all the questions yet, but your current score is <span> ${fValentine.score} right answers</span>.</p></div>
+            <button value="Play Again" onClick="window.location.reload()">Play again!</button>`);
         };
     });
 };

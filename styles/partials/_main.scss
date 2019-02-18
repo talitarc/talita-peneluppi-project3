@@ -41,6 +41,8 @@ h2 {
     label {
         width: 80%;
         @include body-text(0.9rem, 1.2rem);
+        padding: 2%;
+        padding-right: 0;
     }
 
     input[type="radio"] {
@@ -49,7 +51,11 @@ h2 {
 }
 
 input[type="radio"]:checked + label {
-    background-color: green;
+    background-color: $second-detail-color;
+    opacity: 0.4;
+    color: $lightest-color;
+    font-weight: bold;
+    border-radius: 2px;
     
 }
 
@@ -70,10 +76,26 @@ input[type="radio"]:checked + label {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    padding: 2%;
+    margin-bottom: 2%;
 }
 
 .box-score {
     padding: 10%;
+    background-color: $light-detail-color;
+    @include body-text(1rem, 1.2rem);
+    font-weight: bold;
+    text-align: center;
+
+    span {
+        color: $main-detail-color;
+    }
+}
+
+.score-clicked {
+    background-color: $light-detail-color;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.828 12h-3.656z' fill='%23ff1a4a' fill-opacity='0.33' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 // IPAD STYLES 

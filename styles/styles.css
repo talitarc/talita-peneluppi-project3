@@ -364,6 +364,8 @@ h2 {
   font-family: 'Ubuntu', sans-serif;
   font-size: 0.9rem;
   line-height: 1.2rem;
+  padding: 2%;
+  padding-right: 0;
 }
 
 .opt-box input[type="radio"] {
@@ -371,7 +373,11 @@ h2 {
 }
 
 input[type="radio"]:checked + label {
-  background-color: green;
+  background-color: #7d433e;
+  opacity: 0.4;
+  color: #f4f6ec;
+  font-weight: bold;
+  border-radius: 2px;
 }
 
 .answer {
@@ -409,10 +415,27 @@ input[type="radio"]:checked + label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 2%;
+  margin-bottom: 2%;
 }
 
 .box-score {
   padding: 10%;
+  background-color: #f8b786;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.box-score span {
+  color: #ff1a4a;
+}
+
+.score-clicked {
+  background-color: #f8b786;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.828 12h-3.656z' fill='%23ff1a4a' fill-opacity='0.33' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 @media (min-width: 768px) {
@@ -441,8 +464,15 @@ footer p {
   line-height: 1rem;
 }
 
-main input[type='submit'] {
-  background-color: #ff1a4a;
+footer span {
+  -webkit-transform: rotate(200grad);
+          transform: rotate(200grad);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+main input[type='submit'],
+main button {
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,7 +481,6 @@ main input[type='submit'] {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px;
-  color: #f4f6ec;
   font-family: 'Ubuntu', sans-serif;
   font-size: 1rem;
   font-weight: bold;
@@ -461,6 +490,18 @@ main input[type='submit'] {
   -ms-flex-item-align: center;
       align-self: center;
   border-radius: 5px;
+}
+
+main input[type='submit'] {
+  background-color: #ff1a4a;
+  color: #f4f6ec;
+}
+
+main button {
+  background-color: #f4f6ec;
+  color: #ff1a4a;
+  border: 2px dotted #ff1a4a;
+  margin-top: 2%;
 }
 
 @media (min-width: 992px) {

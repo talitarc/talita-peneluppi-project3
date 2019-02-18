@@ -9,4 +9,11 @@ footer {
 
         @include body-text(0.8rem, 1rem);
     }
+
+// COPYLEFT SYMBOL
+    span {
+        transform: rotate(200grad);
+        font-weight: bold;
+        font-size: 1rem;
+    }
 }
