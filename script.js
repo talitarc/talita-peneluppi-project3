@@ -307,7 +307,7 @@ fValentine.quizz = (object) => {
             <label for="${element.id[3]}">${element.pair[3]}</label>
             </div>
         
-            <div class="answer"><h2>Answer: ${element.answer}</h2></div>
+            <div class="answer"><h2><span>Answer:</span> ${element.answer}</h2></div>
             </div>
         `);
         $('div.answer').addClass("display-answer"); 
@@ -348,9 +348,9 @@ fValentine.showScore = () => {
     $('input[type=submit]').on('click', function(event){
         
         if (fValentine.answerCount == 5) {
-            $('.score').html(`You got ${fValentine.score} answers right!`);
+            $('.score').append(`<div class="box-score"><p>You got ${fValentine.score} answers right!</p></div>`);
         } else if (0 < fValentine.answerCount < 5) {
-            $('.score').html(`You haven\'t answer all our questions yet!, but your current score is ${fValentine.score}.`);
+            $('.score').append(`<div class="box-score"><p>You haven\'t answer all our questions yet!, but your current score is ${fValentine.score}.</p></div>`);
         };
     });
 };

@@ -3,7 +3,7 @@
 $darkest-color: #2d0c03;
 $lightest-color: #f4f6ec;
 $main-detail-color: #ff1a4a;
-$second-detail-color: #98514b;
+$second-detail-color: #7d433e;
 $light-detail-color: #f8b786;
 
 //FONT STYLES VARIABLES
@@ -29,6 +29,12 @@ $light-detail-color: #f8b786;
 
 html {
     font-size: 125%;
+}
+
+//BODY BG
+
+body {
+    background-color: $light-detail-color;
 }
 
 // WRAPPER STYLES

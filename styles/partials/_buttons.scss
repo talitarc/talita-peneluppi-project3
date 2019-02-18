@@ -1,0 +1,26 @@
+main {
+    input[type='submit'] {
+        background-color: $main-detail-color;
+        border: none;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    
+        color: $lightest-color;
+        @include secondary-title(1rem);
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 2%;
+        align-self: center;
+        border-radius: 5px;
+    }
+}
+
+// SMALL SCREENS STYLES
+@media (min-width: 992px) {
+    main {
+        input[type='submit'] {
+            width: 50%;
+        }
+    }
+}

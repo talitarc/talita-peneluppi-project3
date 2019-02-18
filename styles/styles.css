@@ -169,6 +169,10 @@ html {
   font-size: 125%;
 }
 
+body {
+  background-color: #f8b786;
+}
+
 .wrapper {
   width: 80%;
   max-width: 1024px;
@@ -176,7 +180,8 @@ html {
 }
 
 header {
-  background-color: #2d0c03;
+  background-color: #ff1a4a;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.828 12h-3.656z' fill='%23f8b786' fill-opacity='0.99' fill-rule='evenodd'/%3E%3C/svg%3E");
   color: #f4f6ec;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -194,7 +199,8 @@ header {
 }
 
 header .wrapper {
-  border: 2px dotted #f8b786;
+  background-color: #7d433e;
+  border: 4px solid #f8b786;
   margin: 5% auto;
 }
 
@@ -205,10 +211,11 @@ header p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   margin-top: 0;
   margin: 3%;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   line-height: 1.4rem;
 }
 
@@ -232,7 +239,7 @@ header p {
   color: #ff1a4a;
   -webkit-transform: rotate(-20grad);
           transform: rotate(-20grad);
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .main-title h1 {
@@ -288,6 +295,25 @@ header p {
   }
 }
 
+main {
+  background-color: #f8b786;
+  color: #2d0c03;
+}
+
+main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .wrapper .display-answer {
+  display: none;
+}
+
 .question {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -299,15 +325,23 @@ header p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 4px dotted #7d433e;
+  padding: 2%;
+  margin-top: 15%;
 }
 
 h2 {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 5%;
 }
 
 .opt-box {
@@ -322,28 +356,69 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 2%;
+  padding-bottom: 4%;
 }
 
 .opt-box label {
-  width: 65%;
+  width: 80%;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
 }
 
 .opt-box input[type="radio"] {
-  margin-right: 2%;
-}
-
-.display-answer {
-  display: none;
-}
-
-.opt-clicked {
-  background-color: red;
-  opacity: 0.5;
+  margin-right: 3%;
 }
 
 input[type="radio"]:checked + label {
   background-color: green;
+}
+
+.answer {
+  width: 100%;
+  border: 4px solid #ff1a4a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.answer h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 6% 0;
+}
+
+.score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box-score {
+  padding: 10%;
+}
+
+@media (min-width: 768px) {
+  .opt-box label {
+    width: 35%;
+  }
 }
 
 footer {
@@ -364,5 +439,33 @@ footer p {
   font-family: 'Ubuntu', sans-serif;
   font-size: 0.8rem;
   line-height: 1rem;
+}
+
+main input[type='submit'] {
+  background-color: #ff1a4a;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  color: #f4f6ec;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 2%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  border-radius: 5px;
+}
+
+@media (min-width: 992px) {
+  main input[type='submit'] {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
