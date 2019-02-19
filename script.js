@@ -259,9 +259,8 @@ const questions = [
     }
 ];
 
+// EXTENDED: QUESTIONS APPEARS RANDOMLY AND WITHOUT REPETITION WHEN THE DOM IS LOAD
 const fValentine = [];
-
-// EXT: QUESTIONS APPEARS RANDOMLY AND WITHOUT REPETITION WHEN THE DOM IS LOAD
 
 // MATH.RANDOM *11 TO GUARANTEE THAT WE WILL ALWAYS HAVE 5 ELEMENTS IN THE ARRAY
 const randomNumb = Math.floor(Math.random() * 11);
@@ -275,13 +274,13 @@ fValentine.score = 0;
 // CREATE A VARIABLE TO STORE QUESTIONS ANSWERED
 fValentine.answerCount = 0;
 
+// LOAD WHEN INIT THE APP
 fValentine.init = () => {
     fValentine.quizz(displayQuestions);
     fValentine.showScore();
 };
 
 // DISPLAY SELECTED QUESTIONS IN THE DOM
-
 fValentine.quizz = (object) => {
 
     object.forEach((element) => {
@@ -307,7 +306,7 @@ fValentine.quizz = (object) => {
             <label for="${element.id[3]}">${element.pair[3]}</label>
             </div>
         
-            <div class="answer"><h2><span>Answer:</span> ${element.answer}</h2><div class="photo-box"><img src=${element.imgAnswer} alt="${element.person} and ${element.answer}"></div></div>
+            <div class="answer" id=${element.person}><h2><span>Answer:</span> ${element.answer}</h2><div class="photo-box"><img src=${element.imgAnswer} alt="${element.person} and ${element.answer}"></div></div>
             
             </div>
         `);
@@ -323,13 +322,13 @@ fValentine.identifyClick = () => {
 // IDENTIFY THE USER ANSWER AND KEEP THE USERS ANSWER
         let userAnswer = this.value;
 
-//IDENTIFY THE PARENT TO DISPLAY THE ANSWER
+// IDENTIFY THE PARENT TO DISPLAY THE ANSWER
         let parent = ($(this).parent()).parent();
         
 // SHOW THE ANSWER TO THE USER
         const checkAnswer = $(parent).find('.answer');
         checkAnswer.removeClass('display-answer');
-//
+// STORE THE ANSWER TEXT TO COMPARE TO THE USER'S ANSWER
         let rightAnswer = checkAnswer.text();
 
 // UPDATE THE ANSWER COUNTING TO DEFINE WHICH SCORE MESSAGE WILL BE SHOWN BY SHOWSCORE
@@ -337,9 +336,10 @@ fValentine.identifyClick = () => {
             fValentine.answerCount = fValentine.answerCount + 1;
         }
 
-// IF USER IS RIGHT ADD +1 TO THE SCORE VARIABLE
+// IF USER IS RIGHT ADD +1 TO THE SCORE VARIABLE AND CHANGE THE BORDER COLOR
         if (rightAnswer == `Answer: ${userAnswer}`) {
             fValentine.score = fValentine.score +1;
+            $(checkAnswer).addClass('answer-correct');
         }
     });
 };

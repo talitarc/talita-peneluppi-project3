@@ -5,6 +5,7 @@ $lightest-color: #f4f6ec;
 $main-detail-color: #ff436a;
 $second-detail-color: #7d433e;
 $light-detail-color: #fce5d5;
+$border-right-answer: #7ac74f;
 
 //FONT STYLES VARIABLES
 @mixin brand-name($size-value) {
@@ -26,19 +27,16 @@ $light-detail-color: #fce5d5;
 
 
 // FONT ROOT STYLES
-
 html {
     font-size: 125%;
 }
 
 //BODY BG
-
 body {
     background-color: $light-detail-color;
 }
 
 // WRAPPER STYLES
-
 .wrapper {
     width: 80%;
     max-width: 1024px;

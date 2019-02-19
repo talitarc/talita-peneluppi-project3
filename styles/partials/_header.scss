@@ -2,12 +2,10 @@ header {
     background-color: $main-detail-color;
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.828 12h-3.656z' fill='%23fce5d5' fill-opacity='0.58' fill-rule='evenodd'/%3E%3C/svg%3E");
     color: $lightest-color;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-
     padding-bottom: 4%;
 
     .wrapper {
@@ -22,10 +20,8 @@ header {
        text-align: center;
        margin-top: 0;
        margin: 3%;
-
        @include body-text(0.7rem, 1.4rem);
     }
-
 }
 
 .main-title {
@@ -52,7 +48,6 @@ header {
 }
 
 // IPAD STYLES 
-
 @media (min-width: 768px) {
     header {
         p {
@@ -74,7 +69,6 @@ header {
 }
 
 // SMALL SCREENS 
-
 @media (min-width: 992px) {
     header {
         p {
@@ -89,7 +83,6 @@ header {
 }
 
 // BIGGER SCREENS
-
 @media (min-width: 1200px) {
     header {
         padding-bottom: 0;

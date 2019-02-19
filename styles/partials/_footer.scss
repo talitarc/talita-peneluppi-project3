@@ -6,7 +6,6 @@ footer {
     p {
         display: flex;
         justify-content: center;
-
         @include body-text(0.8rem, 1rem);
     }
 
