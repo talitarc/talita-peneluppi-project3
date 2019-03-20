@@ -287,8 +287,9 @@ fValentine.quizz = (object) => {
 
         $('form.quizz').append(`
             <div class="question">
+            <div class="firstColumn">
             <h2>${element.person}</h2>
-        
+
             <div class="opt-box">
             <input type="radio" id="${element.id[0]}" name="${element.person}" value="${element.pair[0]}">
             <label for="${element.id[0]}">${element.pair[0]}</label></div>
@@ -304,6 +305,7 @@ fValentine.quizz = (object) => {
             <div class="opt-box">
             <input type="radio" id="${element.id[3]}" name="${element.person}" value="${element.pair[3]}">
             <label for="${element.id[3]}">${element.pair[3]}</label>
+            </div>
             </div>
         
             <div class="answer" id=${element.person}><h2><span>Answer:</span> ${element.answer}</h2><div class="photo-box"><img src=${element.imgAnswer} alt="${element.person} and ${element.answer}"></div></div>
@@ -323,7 +325,7 @@ fValentine.identifyClick = () => {
         let userAnswer = this.value;
 
 // IDENTIFY THE PARENT TO DISPLAY THE ANSWER
-        let parent = ($(this).parent()).parent();
+        let parent = ($(this).parent()).parent().parent();
         
 // SHOW THE ANSWER TO THE USER
         const checkAnswer = $(parent).find('.answer');
